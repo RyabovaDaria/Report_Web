@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Заметки по работе</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>Заметки по работе</h1>
+      </header>
+
+      <section class="form-section">
+        <div class="form-grid">
+          <label>
+            <span>Дата</span>
+            <input id="dateInput" type="text" placeholder="2 октября">
+          </label>
+          <label>
+            <span>Адрес, название организации</span>
+            <input id="addressInput" type="text" placeholder="Улица Цюрупы, Рюмочная">
+          </label>
+          <label>
+            <span>Описание услуги</span>
+            <input id="descInput" type="text" placeholder="Настройка роутера, протяжка кабеля">
+          </label>
+          <label>
+            <span>Стоимость (руб.)</span>
+            <input id="costInput" type="number" inputmode="numeric" placeholder="3000">
+          </label>
+        </div>
+        <div class="actions">
+          <button id="addBtn" class="btn primary">Добавить заметку</button>
+          <button id="saveEditBtn" class="btn hidden">Сохранить изменения</button>
+          <button id="cancelEditBtn" class="btn hidden">Отмена</button>
+          <button id="clearBtn" class="btn danger">Очистить заметки</button>
+        </div>
+        <p id="hint" class="muted small"></p>
+      </section>
+
+      <section class="list-section">
+        <h2 class="section-title">Заметки</h2>
+        <ul id="notesList" class="notes"></ul>
+        <div class="actions">
+          <button id="reportBtn" class="btn wide">Сформировать отчёт</button>
+        </div>
+      </section>
+
+      <section class="report-section">
+        <h2 class="section-title">Отчёт</h2>
+        <textarea id="reportOutput" class="report" rows="10" readonly></textarea>
+        <div class="actions">
+          <button id="copyBtn" class="btn">Копировать</button>
+        </div>
+      </section>
+
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+
